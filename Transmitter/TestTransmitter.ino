@@ -60,7 +60,8 @@ void loop()
   Normal:    data.ch1 = map( analogRead(A0), 0, 1024, 0, 255);
   Reversed:  data.ch1 = map( analogRead(A0), 0, 1024, 255, 0);  */
   
-  sent_data.left_right = analogRead(A0);
+  sent_data.left_right = map(analogRead(A0), 0, 1024, 1024, 0);
+//  sent_data.left_right = analogRead(A0);
   sent_data.up_down = analogRead(A1);
 //  Serial.print("left_right = ");
 //  Serial.print(sent_data.left_right);
